@@ -1,0 +1,250 @@
+/* ============================================================
+   NACHO POLETTI — DESIGN SYSTEM TOKENS
+   colors_and_type.css
+   ============================================================ */
+
+/* ── WEBFONTS ──────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-ExtraBold.ttf') format('truetype');
+  font-weight: 800; font-style: normal;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800; font-style: italic;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-Black.ttf') format('truetype');
+  font-weight: 900; font-style: normal;
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('fonts/BarlowCondensed-BlackItalic.ttf') format('truetype');
+  font-weight: 900; font-style: italic;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal;
+}
+
+/* ── BASE COLOR TOKENS ─────────────────────────────────────── */
+:root {
+  /* Raw palette */
+  --np-black:  #111111;
+  --np-dark:   #2C2C2C;
+  --np-red:    #C0392B;
+  --np-mid:    #666666;
+  --np-light:  #F4F4F4;
+  --np-white:  #FFFFFF;
+  --np-border: #E0E0E0;
+  --np-divider:#1E1E1E;  /* dark-mode divider */
+
+  /* Semantic foreground */
+  --fg1:       var(--np-black);   /* primary text */
+  --fg2:       var(--np-dark);    /* dark alt text */
+  --fg3:       var(--np-mid);     /* secondary / muted text */
+  --fg-accent: var(--np-red);     /* accent text / labels */
+
+  /* Semantic background */
+  --bg-primary:   var(--np-black);  /* dark sections */
+  --bg-secondary: var(--np-white);  /* default light */
+  --bg-tertiary:  var(--np-light);  /* alternate light */
+  --bg-accent:    var(--np-red);    /* impact sections */
+
+  /* Border / divider */
+  --border-default: 1px solid var(--np-border);
+  --border-heavy:   4px solid var(--np-black);
+  --border-heavier: 6px solid var(--np-black);
+  --border-accent:  6px solid var(--np-red);
+  --border-dark:    1px solid var(--np-divider);
+
+  /* ── BASE FONT TOKENS ──────────────────────────────────── */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Space Grotesk', sans-serif;
+
+  /* Display weights (only these two are permitted) */
+  --fw-display-primary:   900;  /* Black — headlines, names */
+  --fw-display-secondary: 800;  /* ExtraBold — sub-headlines */
+
+  /* Body weights */
+  --fw-body-bold:       700;
+  --fw-body-semibold:   600;
+  --fw-body-medium:     500;
+  --fw-body-regular:    400;
+  --fw-body-light:      300;
+
+  /* ── TYPOGRAPHIC SCALE ─────────────────────────────────── */
+  /* Display */
+  --type-display-xl-size:    100px;
+  --type-display-xl-weight:  900;
+  --type-display-xl-leading: 0.85;
+  --type-display-xl-tracking:-0.01em;
+
+  --type-display-l-size:    68px;
+  --type-display-l-weight:  900;
+  --type-display-l-leading: 0.88;
+
+  --type-display-m-size:    44px;
+  --type-display-m-weight:  800;
+  --type-display-m-leading: 0.92;
+
+  /* Body headings */
+  --type-heading-size:    28px;
+  --type-heading-weight:  700;
+  --type-heading-leading: 1.1;
+
+  --type-subheading-size:    20px;
+  --type-subheading-weight:  600;
+  --type-subheading-leading: 1.2;
+
+  /* Body */
+  --type-body-size:    15px;
+  --type-body-weight:  400;
+  --type-body-leading: 1.8;
+
+  --type-body-sm-size:    13px;
+  --type-body-sm-weight:  400;
+  --type-body-sm-leading: 1.75;
+
+  /* Label */
+  --type-label-size:    10px;
+  --type-label-weight:  700;
+  --type-label-leading: 1;
+  --type-label-tracking:0.22em;
+
+  /* ── SPACING SCALE ─────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-14:  56px;
+  --space-15:  60px;  /* section padding standard */
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-25: 100px;
+
+  /* ── CORNER RADIUS ─────────────────────────────────────── */
+  --radius: 0;  /* Sharp edges. Always. */
+
+  /* ── SHADOWS ───────────────────────────────────────────── */
+  --shadow: none;  /* No shadows on UI elements */
+}
+
+/* ── SEMANTIC TYPE CLASSES ─────────────────────────────────── */
+
+.np-display-xl {
+  font-family: var(--font-display);
+  font-size: var(--type-display-xl-size);
+  font-weight: var(--type-display-xl-weight);
+  text-transform: uppercase;
+  line-height: var(--type-display-xl-leading);
+  letter-spacing: var(--type-display-xl-tracking);
+}
+
+.np-display-l {
+  font-family: var(--font-display);
+  font-size: var(--type-display-l-size);
+  font-weight: var(--type-display-l-weight);
+  text-transform: uppercase;
+  line-height: var(--type-display-l-leading);
+}
+
+.np-display-m {
+  font-family: var(--font-display);
+  font-size: var(--type-display-m-size);
+  font-weight: var(--type-display-m-weight);
+  text-transform: uppercase;
+  line-height: var(--type-display-m-leading);
+}
+
+.np-heading {
+  font-family: var(--font-body);
+  font-size: var(--type-heading-size);
+  font-weight: var(--type-heading-weight);
+  line-height: var(--type-heading-leading);
+}
+
+.np-subheading {
+  font-family: var(--font-body);
+  font-size: var(--type-subheading-size);
+  font-weight: var(--type-subheading-weight);
+  line-height: var(--type-subheading-leading);
+}
+
+.np-body {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-leading);
+}
+
+.np-body-sm {
+  font-family: var(--font-body);
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--type-body-sm-weight);
+  line-height: var(--type-body-sm-leading);
+}
+
+.np-label {
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  text-transform: uppercase;
+  letter-spacing: var(--type-label-tracking);
+  line-height: var(--type-label-leading);
+}
+
+/* ── UTILITY CLASSES ───────────────────────────────────────── */
+.np-red    { color: var(--np-red); }
+.np-mid    { color: var(--np-mid); }
+.np-white  { color: var(--np-white); }
+.np-black  { color: var(--np-black); }
+
+.bg-black  { background: var(--np-black); }
+.bg-white  { background: var(--np-white); }
+.bg-light  { background: var(--np-light); }
+.bg-red    { background: var(--np-red); }
+
+/* Section divider utilities */
+.border-top-heavy  { border-top:  var(--border-heavy); }
+.border-top-accent { border-top:  var(--border-accent); }
+.border-bot-accent { border-bottom: var(--border-accent); }
