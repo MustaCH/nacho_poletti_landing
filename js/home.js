@@ -632,7 +632,7 @@
         body: JSON.stringify({
           name, email, tipo: S.type || '—', presupuesto: S.budget ? S.budget + ' usd' : '—', message: msg,
           _honey: form.elements._honey.value,
-          _subject: 'Nuevo contacto desde nachopoletti.com — ' + name, _template: 'table', _captcha: 'false'
+          _subject: 'Nuevo contacto desde ignaciopoletti.dev — ' + name, _template: 'table', _captcha: 'false'
         })
       });
       const data = await res.json().catch(() => ({}));
