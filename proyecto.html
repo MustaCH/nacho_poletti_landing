@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignacio Poletti — proyecto</title>
+<meta name="description" content="Proyectos de Ignacio Poletti, desarrollador de software: qué se construyó, con qué stack y en qué estado está.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preload" href="fonts/BarlowCondensed-Black.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/SpaceGrotesk-Medium.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/proyecto.css">
+<script defer src="js/i18n.js"></script>
+<script defer src="js/projects-data.js"></script>
+<script defer src="js/common.js"></script>
+<script defer src="js/proyecto.js"></script>
+<script defer src="js/morph.js"></script>
+</head>
+<body>
+
+<div class="scan"></div>
+
+<div class="pbar top glow">
+  <a href="index.html#trabajo" style="justify-self:start;pointer-events:auto" data-t="back">&lt;&lt; volver</a>
+  <a href="index.html" style="pointer-events:auto;display:flex;align-items:center;gap:12px">
+    <span>ignacio</span>
+    <svg width="30" height="30" viewBox="0 0 100 100" fill="none" style="flex:none;filter:drop-shadow(0 0 6px rgba(230,43,30,.7))"><rect x="3" y="3" width="94" height="94" stroke="#E62B1E" stroke-width="6"></rect><rect x="21" y="21" width="58" height="58" stroke="#E62B1E" stroke-width="4"></rect><rect x="37" y="37" width="26" height="26" fill="#E62B1E"></rect></svg>
+    <span>poletti</span>
+  </a>
+  <button type="button" data-act="toggleLang" aria-label="Cambiar idioma" class="btn" style="justify-self:end;pointer-events:auto;display:flex;gap:6px"><span data-t="esTxt" data-s="opacity:esOp">[es]</span><span data-t="enTxt" data-s="opacity:enOp">en</span></button>
+</div>
+
+<div class="pbar bottom glow">
+  <span data-t="footLeft"></span>
+  <span style="text-align:right" data-t="footRight"></span>
+</div>
+
+<main data-s="opacity:fade;filter:fadeF">
+
+<section id="p-hero" class="ps glow" data-screen-label="01 Proyecto" style="height:max(100svh, 560px);display:flex;flex-direction:column;gap:2vh;overflow:visible;font-size:clamp(12px,2.1vh,17px)">
+  <div class="host a" style="left:0;right:0;top:-10svh;height:120svh;z-index:0"><np-morph scale="0.9" refh="0.62" cy="0.44" data-a="model:model;refw:mRefW;cx:mCx"></np-morph></div>
+  <div style="position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:6vw;flex-wrap:wrap">
+    <div class="col"><span>[01] <span data-t="labelProject"></span></span><span style="padding-left:3vw"><span data-t="field"></span></span><span><span data-t="year"></span></span></div>
+    <div class="col" style="align-items:flex-end;text-align:right">
+      <span class="bc" style="font-size:clamp(44px,11vh,140px);line-height:.8;text-shadow:0 0 18px rgba(230,43,30,.5);filter:blur(.5px)"><span data-t="metric"></span></span>
+      <span>&gt;&gt; <span data-t="metricLbl"></span></span>
+    </div>
+  </div>
+  <div style="flex:1;min-height:0"></div>
+  <h1 class="big col" data-list="name" data-a="aria-label:nameAria" style="position:relative;z-index:1;font-size:min(18vw,22vh);line-height:.82;text-shadow:0 0 22px rgba(230,43,30,.5);filter:blur(.6px)"></h1>
+  <div style="position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:3vh 6vw;flex-wrap:wrap">
+    <p style="max-width:44ch;text-wrap:pretty">** <span data-t="lede"></span></p>
+    <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:.3vh 18px;max-width:560px">
+      <span data-t="labelClient"></span><span><span data-t="client"></span></span>
+      <span data-t="labelServices"></span><span style="text-wrap:pretty"><span data-t="services"></span></span>
+      <span data-t="labelStatus"></span><span><span data-t="status"></span></span>
+    </div>
+  </div>
+</section>
+
+<section id="p-built" class="ps glow" data-screen-label="02 Lo que hicimos" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));align-content:center;gap:3vh 5vw;font-size:clamp(12px,1.9vh,16px)">
+  <div class="col" style="gap:3vh;align-self:start">
+    <span>[02] ://</span>
+    <h2 class="big col" style="font-size:min(13vw,15vh);line-height:.82;text-shadow:0 0 22px rgba(230,43,30,.5);filter:blur(.5px)"><span data-t="built1"></span><span style="padding-left:.6em" data-t="built2"></span></h2>
+    <p style="max-width:40ch;text-wrap:pretty;padding-left:3vw"><span data-t="intro"></span></p>
+  </div>
+  <div class="col" data-list="built" style="gap:1.4vh"></div>
+</section>
+
+<section id="p-stack" class="ps glow" data-screen-label="03 Stack" style="display:flex;flex-direction:column;justify-content:center;gap:5vh;font-size:clamp(13px,2.2vh,17px)">
+  <div style="display:flex;justify-content:space-between;gap:4vw"><span>[03] stack ://</span><span style="text-align:right"><span data-t="stackCount"></span> <span data-t="labelTools"></span></span></div>
+  <div class="big" data-list="stack" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .35em;font-size:min(9vw,11vh);line-height:.95;text-shadow:0 0 18px rgba(230,43,30,.5);filter:blur(.5px)"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:3vh 6vw;flex-wrap:wrap">
+    <div class="col"><span><span data-t="labelStatus"></span> ://</span><span style="padding-left:3vw"><span data-t="status"></span></span></div>
+    <a data-show="hasUrl" data-a="href:url" target="_blank" rel="noopener" class="big" style="font-size:min(clamp(28px,6vh,64px),7.2vw);line-height:1;max-width:100%;overflow-wrap:anywhere;text-shadow:0 0 14px rgba(230,43,30,.5)">[<span data-t="urlLbl"></span>]</a>
+  </div>
+</section>
+
+<section id="p-next" class="ps glow" data-screen-label="04 Siguiente" style="display:flex;flex-direction:column;justify-content:space-between;gap:2.4vh;font-size:clamp(12px,2vh,16px)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:4vw;flex-wrap:wrap">
+    <button type="button" data-act="prev" class="btn col"><span>&lt;&lt; <span data-t="labelPrev"></span></span><span style="padding-left:3vw">://<span data-t="prevSlug"></span></span></button>
+    <div class="col" data-list="index" style="align-items:flex-end;gap:0"></div>
+  </div>
+  <button type="button" data-act="next" class="btn col" style="gap:2vh;width:100%">
+    <span>[04] <span data-t="labelNext"></span> ://</span>
+    <span class="big col" data-list="next" style="font-size:min(16vw,20vh);line-height:.82;text-shadow:0 0 22px rgba(230,43,30,.5);filter:blur(1.5px)"></span>
+  </button>
+  <div style="display:flex;justify-content:space-between;gap:4vw">
+    <span><span data-t="nextMetric"></span> <span data-t="nextMetricLbl"></span></span>
+    <a href="index.html#trabajo">[<span data-t="labelAllWork"></span>]</a>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>

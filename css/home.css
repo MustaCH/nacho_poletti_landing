@@ -1,0 +1,52 @@
+/* Home. One-off positions stay inline in index.html; what repeats lives here. */
+
+html{scroll-snap-type:y proximity;scroll-behavior:smooth}
+input,textarea{font-family:inherit;color:inherit;background:transparent;border:0;outline:none;border-radius:0}
+input::placeholder,textarea::placeholder{color:rgba(230,43,30,.55)}
+
+/* loader */
+.loader{position:fixed;inset:0;z-index:800;transition:opacity .22s linear;background:#0A0A0A;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:min(2.6vh,4vw);font-size:min(24px,3.4vh,4.6vw);font-weight:500}
+.blocks{display:flex;gap:min(6px,.8vh,1vw);margin-top:1vh}
+.blocks span{display:block;width:min(16px,2.2vh,3.2vw);height:min(16px,2.2vh,3.2vw);background:#E62B1E;opacity:.14}
+
+/* ---------- desktop ---------- */
+.hud{position:fixed;inset:0;z-index:100;pointer-events:none;font-size:min(17px,2.6vh);font-weight:500;line-height:1.3;color:#E62B1E}
+.hud-logo{left:50%;top:3.6vh;transform:translateX(-50%);pointer-events:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}
+
+.d{position:relative;height:100svh;overflow:hidden;scroll-snap-align:start;background:#0A0A0A;font-size:min(17px,2.6vh);font-weight:500;line-height:1.3}
+.dt{position:relative;overflow:clip;background:#0A0A0A;font-size:min(17px,2.6vh);font-weight:500;line-height:1.3}
+.sticky{position:sticky;top:0;height:100svh;overflow:hidden}
+.snap{position:absolute;left:0;width:1px;height:100svh;scroll-snap-align:start}
+
+/* servicios: brackets that hug the active title */
+.brk{position:absolute;top:-.46em;width:.14em;height:.92em;border:.06em solid #E62B1E;filter:drop-shadow(0 0 7px rgba(230,43,30,.6)) blur(.4px)}
+.brk-l{left:0;border-right:0;transform:translateX(0);transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+.brk-r{left:100%;border-left:0;transform:translateX(0);transition:transform .38s cubic-bezier(.2,.8,.2,1),left .6s cubic-bezier(.2,.8,.2,1)}
+.svc-list{position:absolute;left:.24em;top:0;transition:transform .6s cubic-bezier(.2,.8,.2,1);text-shadow:0 0 20px rgba(230,43,30,.5)}
+[data-svc]{transition:filter .45s ease,opacity .45s ease;cursor:pointer;pointer-events:auto;width:max-content;white-space:nowrap}
+
+/* sobre mí: photo collage */
+.photo{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.9) brightness(1.05);mix-blend-mode:multiply}
+.lines{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg, rgba(10,10,10,.6) 0 1px, transparent 1px 3px)}
+.frame{position:absolute;border:1px solid #E62B1E;box-shadow:0 0 8px rgba(230,43,30,.45);z-index:2}
+.frame-in{position:absolute;inset:3px;overflow:hidden;background:#E62B1E}
+.frame-img{position:absolute;inset:0;background-image:url(../assets/about/aboutpic-blur.webp);filter:grayscale(1) contrast(1.9) brightness(1.05);mix-blend-mode:multiply}
+.dot{position:absolute;width:8px;height:8px;background:#E62B1E}
+.dot.tl{left:-4px;top:-4px}.dot.tr{right:-4px;top:-4px}.dot.bl{left:-4px;bottom:-4px}.dot.br{right:-4px;bottom:-4px}
+.frame.sm .frame-in{inset:2px}
+.frame.sm .dot{width:6px;height:6px}
+.frame.sm .dot.tl{left:-3px;top:-3px}.frame.sm .dot.tr{right:-3px;top:-3px}.frame.sm .dot.bl{left:-3px;bottom:-3px}.frame.sm .dot.br{right:-3px;bottom:-3px}
+
+/* contacto */
+.field{border-bottom:1px solid #E62B1E;text-shadow:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:4px 18px}
+.submit{transition:color .2s}
+.submit:hover{color:#FFFFFF}
+.submit:disabled{cursor:default}
+
+/* ---------- mobile ---------- */
+.mbar{position:fixed;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;background:#0A0A0A;font-size:13px;font-weight:500}
+.m{position:relative;min-height:100svh;padding:13vh 5vw 13vh;overflow:hidden;background:#0A0A0A;font-size:13px;font-weight:500;line-height:1.35}
+.mbig{font-family:"Barlow Condensed";font-weight:900;text-transform:uppercase;line-height:.86;text-shadow:0 0 18px rgba(230,43,30,.5)}
+.m-svc{display:flex;flex-direction:column;gap:1.2vh;border-top:1px solid rgba(230,43,30,.35);padding-top:2vh}
+.m-work{position:relative;z-index:2;height:100svh;padding:calc(54px + 2vh) 5vw calc(46px + 2vh);overflow:visible;background:#0A0A0A;font-size:13px;font-weight:500;line-height:1.35;display:flex;flex-direction:column;gap:2vh}
